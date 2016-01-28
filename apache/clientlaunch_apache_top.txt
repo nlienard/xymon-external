@@ -1,0 +1,5 @@
+[apache_top]
+        ENVFILE $HOBBITCLIENTHOME/etc/hobbitclient.cfg
+        CMD $HOBBITCLIENTHOME/ext/apache.pl
+        LOGFILE $HOBBITCLIENTHOME/logs/apache.log
+        INTERVAL 5m
