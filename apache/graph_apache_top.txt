@@ -1,0 +1,12 @@
+# To add in graph.cfg
+[apache_top]
+        FNPATTERN apache_top(.*).rrd
+        TITLE Apache Hits
+        YAXIS  count
+        DEF:p@RRDIDX@=@RRDFN@:last_hour:AVERAGE
+        LINE2:p@RRDIDX@#@COLOR@:@RRDPARAM@
+        -l 0
+        GPRINT:p@RRDIDX@:LAST: \: %5.1lf (cur)
+        GPRINT:p@RRDIDX@:MAX: \: %5.1lf (max)
+        GPRINT:p@RRDIDX@:MIN: \: %5.1lf (min)
+        GPRINT:p@RRDIDX@:AVERAGE: \: %5.1lf (avg)\n
